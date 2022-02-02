@@ -1,5 +1,6 @@
 var map = "";
 var expansion = "";
+var city = "";
 
 function sindan(){
 
@@ -11,8 +12,20 @@ function sindan(){
     //診断処理
     expansiones();
 
+    
     //診断メーカーで言うところの[診断結果基本テキスト]
+
     document.getElementById("p_name").innerHTML = full_name + "さん" + "<br/>" + expansion+ "の" +map+ "に登場";
+
+    
+    // #実装済み
+    // Full name → 入力された名前
+    // expansion → FF14の拡張パッケージの名前
+    // map → FF14のマップ名（都市は除く）
+    
+    // #未実装 
+    // city → FF14の町の名前
+    // 
 
 }
 
@@ -48,63 +61,216 @@ function expansiones(){
 
 }
 
+//新生エオルゼア a Realm Reborn(arr)
 function arr_map(){
     
     map = "";
-    // rand = 6; //最大数
-    // rand = rand - 1; //0から始まるデータなので-1する
-    //         Random_map = Math.floor(Math.random()*rand);
-    //         console.log(Random_map);
-    //             if(Random_map == 0){
-    //                 map = "ラヴィリンソス";
+    rand = 4; //最大数
+    rand = rand - 1; //0から始まるデータなので-1する
+            Random_map = Math.floor(Math.random()*rand);
+            console.log(Random_map);
+                if(Random_map == 0){
+                    //ラノシア
+                    arr_map1()
+                    console.log(map)
+                    return map
 
-    //             }else if(Random_map == 1){
-    //                 map = "サベネア島";
+                }else if(Random_map == 1){
+                    //黒衣森
+                    arr_map2()
+                    console.log(map)
+                    return map
 
-    //             }else if(Random_map == 2){
-    //                 map = "ガレマルド";
+                }else if(Random_map == 2){
+                    //ザナラーン
+                    arr_map3()
+                    console.log(map)
+                    return map
 
-    //             }else if(Random_map == 3){
-    //                 map = "嘆きの海";
+                }else if(Random_map == 3){
+                    //その他
+                    arr_map4()
+                    console.log(map)
+                    return map
 
-    //             }else if(Random_map == 4){
-    //                 map = "エルピス";
-
-    //             }else if(Random_map == 5){
-    //                 map = "ウルティマ・トゥーレ";
-
-    //             }
+                }
 }
 
-function hw_map(){
+//ラノシア
+function arr_map1(){
+            rand = 6; //最大数
+            rand = rand- 1; //0から始まるデータなので-1する
+            Random_map = Math.floor(Math.random()*rand);
+            console.log(Random_map);
+                if(Random_map == 0){
+                    map = "中央ラノシア";
+                    return
 
-    map = "";
-    // rand = 6; //最大数
-    // rand = rand - 1; //0から始まるデータなので-1する
-    //         Random_map = Math.floor(Math.random()*rand);
-    //         console.log(Random_map);
-    //             if(Random_map == 0){
-    //                 map_ = "ラヴィリンソス";
+                }else if(Random_map == 1){
+                    map = "低地ラノシア";
+                    return
 
-    //             }else if(Random_map == 1){
-    //                 map = "サベネア島";
+                }else if(Random_map == 2){
+                    map = "東ラノシア";
+                    return
 
-    //             }else if(Random_map == 2){
-    //                 map = "ガレマルド";
+                }else if(Random_map == 3){
+                    map = "西ラノシア";
+                    return
 
-    //             }else if(Random_map == 3){
-    //                 map = "嘆きの海";
+                }else if(Random_map == 4){
+                    map = "高地ラノシア";
+                    return
 
-    //             }else if(Random_map == 4){
-    //                 map = "エルピス";
+                }else if(Random_map == 5){
+                    map = "外地ラノシア";
+                    return
 
-    //             }else if(Random_map == 5){
-    //                 map = "ウルティマ・トゥーレ";
-
-    //             }
+                }
 }
 
-function sb_map (map){
+//黒衣森
+function arr_map2(){
+            rand = 4; //最大数
+            rand = rand- 1; //0から始まるデータなので-1する
+            Random_map = Math.floor(Math.random()*rand);
+            console.log(Random_map);
+                if(Random_map == 0){
+                    map = "黒衣森：中央森林";
+                    return
+
+                }else if(Random_map == 1){
+                    map = "黒衣森：東部森林";
+                    return
+
+                }else if(Random_map == 2){
+                    map = "黒衣森：南部森林";
+                    return
+
+                }else if(Random_map == 3){
+                    map = "黒衣森：北部森林";
+                    return
+
+                }
+}
+
+//ザナラーン
+function arr_map3(){
+        rand = 5; //最大数
+        rand = rand- 1; //0から始まるデータなので-1する
+        Random_map = Math.floor(Math.random()*rand);
+            console.log(Random_map);
+                if(Random_map == 0){
+                    map = "西ザナラーン";
+                    return
+
+                }else if(Random_map == 1){
+                    map = "中央ザナラーン";
+                    return
+
+                }else if(Random_map == 2){
+                    map = "東ザナラーン";
+                    return
+
+                }else if(Random_map == 3){
+                    map = "南ザナラーン";
+                    return
+
+                }else if(Random_map == 4){
+                    map = "北ザナラーン";
+                    return
+
+                }
+}
+
+//その他
+function arr_map4(){
+    rand = 3; //最大数
+    rand = rand- 1; //0から始まるデータなので-1する
+    Random_map = Math.floor(Math.random()*rand);
+        console.log(Random_map);
+            if(Random_map == 0){
+                map = "ウルヴズジェイル係船場";
+                return
+
+            }else if(Random_map == 1){
+                map = "ゴールドソーサー";
+                return
+
+            }else if(Random_map == 2){
+                map = "モードゥナ";
+                return
+
+            }
+}
+
+
+//蒼天のイシュガルド Heavensward(hw)
+function hw_map (){
+    rand = 3; //最大数
+    rand = rand - 1; //0から始まるデータなので-1する
+    Random_map = Math.floor(Math.random()*rand);
+    console.log(Random_map);
+        if(Random_map == 0){
+            hw_map1()
+            console.log(map)
+            return map
+        }else if(Random_map == 1){
+            hw_map2()
+            console.log(map)
+            return map
+        }else if(Random_map == 2){
+            hw_map3()
+            console.log(map)
+            return map
+        }
+}
+
+//アバラシア
+function hw_map2(){
+
+    rand = 2; //最大数
+    rand = rand - 1; //0から始まるデータなので-1する
+            Random_map = Math.floor(Math.random()*rand);
+            console.log(Random_map);
+                if(Random_map == 0){
+                    map = "アバラシア雲海";
+                    return
+
+                }else if(Random_map == 1){
+                    map = "アジス・ラー";
+                    return
+
+                }
+}
+
+//ドラヴァニア
+function hw_map1(){
+
+    rand = 3; //最大数
+    rand = rand - 1; //0から始まるデータなので-1する
+            Random_map = Math.floor(Math.random()*rand);
+            console.log(Random_map);
+                if(Random_map == 0){
+                    map = "高地ドラヴァニア";
+
+                }else if(Random_map == 1){
+                    map = "ドラヴァニア雲海";
+
+                }else if(Random_map == 2){
+                    map = "低地ドラヴァニア";
+                }
+}
+
+//クルザス（蒼天）
+function hw_map3(){
+    map = "クルザス西武高地";
+
+}
+
+
+//紅蓮のリベレーター
+function sb_map (){
     rand = 2; //最大数
     rand = rand - 1; //0から始まるデータなので-1する
     Random_map = Math.floor(Math.random()*rand);
@@ -162,6 +328,7 @@ function sb_map_2(){
                 }
 }
 
+//漆黒のヴィランズ
 function shb_map(){
     rand = 6; //最大数
     rand = rand - 1; //0から始まるデータなので-1する
@@ -188,6 +355,7 @@ function shb_map(){
                 }
 }
 
+//暁月のフィナーレ
 function ew_map(){
     rand = 6; //最大数
             rand = rand- 1; //0から始まるデータなので-1する
