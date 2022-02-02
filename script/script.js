@@ -7,7 +7,7 @@ function sindan(){
     //名前と名字を取得
     const name = document.getElementById("name").value;
     const family_name = document.getElementById("family_name").value;
-    const full_name = name + "" + family_name;
+    const full_name = name + " " + family_name;
     
     //診断処理
     expansiones();
@@ -27,10 +27,10 @@ function sindan(){
     // city → FF14の町の名前
     // 
 
-    //     //データ一覧を書き出すだけ
-    //     document.getElementById("name").innerHTML = full_name;
-    //     document.getElementById("expansion").innerHTML = expansion;
-    //     document.getElementById("map").innerHTML = map;
+        //データ一覧を書き出すだけ
+        document.getElementById("name_source").innerHTML = "名前：" + full_name;
+        document.getElementById("expansion").innerHTML = "拡張：" + expansion;
+        document.getElementById("map").innerHTML = "マップ名：" + map;
 
     }
 
