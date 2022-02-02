@@ -27,7 +27,12 @@ function sindan(){
     // city → FF14の町の名前
     // 
 
-}
+    //     //データ一覧を書き出すだけ
+    //     document.getElementById("name").innerHTML = full_name;
+    //     document.getElementById("expansion").innerHTML = expansion;
+    //     document.getElementById("map").innerHTML = map;
+
+    }
 
 function expansiones(){
     rand = 5; //最大数
