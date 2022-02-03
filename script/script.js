@@ -8,6 +8,16 @@ function sindan(){
     const name = document.getElementById("name").value;
     const family_name = document.getElementById("family_name").value;
     const full_name = name + " " + family_name;
+
+    if(name == ""|| family_name == ""){
+        document.getElementById("p_name").innerHTML = full_name + "名前を入力しろ！！";
+
+        
+        document.getElementById("name_source").innerHTML = "名前：" + "Null";
+        document.getElementById("expansion").innerHTML = "拡張：" + "Null";;
+        document.getElementById("map").innerHTML = "マップ名：" + "Null";;
+    }else{
+        
     
     //診断処理
     expansiones();
@@ -31,7 +41,8 @@ function sindan(){
         document.getElementById("name_source").innerHTML = "名前：" + full_name;
         document.getElementById("expansion").innerHTML = "拡張：" + expansion;
         document.getElementById("map").innerHTML = "マップ名：" + map;
-
+        
+        }
     }
 
 function expansiones(){
