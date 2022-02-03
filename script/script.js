@@ -24,8 +24,7 @@ function sindan(){
 
     
     //診断メーカーで言うところの[診断結果基本テキスト]
-
-    document.getElementById("p_name").innerHTML = full_name + "さん" + "<br/>" + expansion+ "の" +map+ "に登場";
+    // document.getElementById("p_name").innerHTML = full_name + "さん" + "<br/>" + expansion+ "の" +map+ "に登場";
 
     
     // #実装済み

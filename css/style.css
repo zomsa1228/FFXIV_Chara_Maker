@@ -1,11 +1,16 @@
-.content{
-    width: 500px;
+ div[class*="col"]{
+    /* width: 500px;
     height: 10em;
     padding-left: 1em;
     border-radius: 1em;
-    border: solid 3px #111;
+    border: solid 3px #111; */
     margin: 1em;
 
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
 }
 
 li { list-style:none; }
