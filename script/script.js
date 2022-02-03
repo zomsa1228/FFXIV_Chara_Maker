@@ -7,7 +7,7 @@ function sindan(){
     //名前と名字を取得
     const name = document.getElementById("name").value;
     const family_name = document.getElementById("family_name").value;
-    const full_name = name + " " + family_name;
+    const full_name = family_name + " " + name;
 
     if(name == ""|| family_name == ""){
         document.getElementById("p_name").innerHTML = full_name + "名前を入力しろ！！";
